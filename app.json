@@ -1,0 +1,7 @@
+{
+  "expo": {
+    "name": "Notification English Center",
+    "icon": "./logo.png",
+    "sdkVersion": "25.0.0"
+  }
+}
