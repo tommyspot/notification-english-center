@@ -38,7 +38,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		fpeee6f1lJyphxT16se0+iEB9pA=
+		ttVQjQdLnplOz9SDumAnqZCtTvc=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
@@ -87,7 +87,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3jelgUs9cb9dAyw0RsBM3gg6qog=
+		/9fAoK2xqVmsoVgexc2lsyn8zGA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -99,7 +99,7 @@
 		</data>
 		<key>PlugIns/notificationEnglishCenterTests.xctest.dSYM/Contents/Resources/DWARF/notificationEnglishCenterTests</key>
 		<data>
-		WygoBS+yBn6hNO8OUgagI4zdwZ4=
+		dLBVan3YKlKfSPGON5o31weaj2g=
 		</data>
 		<key>PlugIns/notificationEnglishCenterTests.xctest/Info.plist</key>
 		<data>
@@ -111,7 +111,7 @@
 		</data>
 		<key>PlugIns/notificationEnglishCenterTests.xctest/notificationEnglishCenterTests</key>
 		<data>
-		IZxyXItnBvaY7LaYnwTE6IEPOO8=
+		D0KxzMH+varDMgstRd9RCA+BkGw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -208,11 +208,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fpeee6f1lJyphxT16se0+iEB9pA=
+			ttVQjQdLnplOz9SDumAnqZCtTvc=
 			</data>
 			<key>hash2</key>
 			<data>
-			itamG/a47nlEN9JGRROPNodDDPlgj7qh9q0JdMq1+Xg=
+			YHJVoUrNe7CGdflLF0uLK2E3FhnzimP6fan5rF33paw=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
@@ -342,11 +342,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WygoBS+yBn6hNO8OUgagI4zdwZ4=
+			dLBVan3YKlKfSPGON5o31weaj2g=
 			</data>
 			<key>hash2</key>
 			<data>
-			3C6skp4Lk1xDtXQNPq/5SW/AXHMGgQkoHC6iQ7a3An4=
+			vGDapWJ8CPOTEBMPoADR5ndQ3OinkeYiV5hLKujnEv0=
 			</data>
 		</dict>
 		<key>PlugIns/notificationEnglishCenterTests.xctest/Info.plist</key>
@@ -375,11 +375,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IZxyXItnBvaY7LaYnwTE6IEPOO8=
+			D0KxzMH+varDMgstRd9RCA+BkGw=
 			</data>
 			<key>hash2</key>
 			<data>
-			BZYLJHBNJXMSkh99of36OzCjnWSASaEDbgqhHWvEyGs=
+			LpbAq7OsRKcf4o7znFQq8Zze1zhshOETI5AERbAQHoI=
 			</data>
 		</dict>
 	</dict>

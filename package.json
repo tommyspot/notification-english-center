@@ -4,9 +4,15 @@
   "private": true,
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "eslint": "^4.17.0",
+    "eslint-plugin-react": "^7.6.1",
+    "eslint-plugin-react-native": "^3.2.1",
     "flow-bin": "^0.65.0",
+    "generator-rn-toolbox": "^3.3.0",
+    "jest": "^22.3.0",
     "jest-react-native": "^18.0.0",
     "react-test-renderer": "16.2.0"
   },
@@ -21,7 +27,6 @@
     "preset": "react-native"
   },
   "dependencies": {
-    "generator-rn-toolbox": "^3.3.0",
     "react": "16.2.0",
     "react-native": "0.52.0"
   }
