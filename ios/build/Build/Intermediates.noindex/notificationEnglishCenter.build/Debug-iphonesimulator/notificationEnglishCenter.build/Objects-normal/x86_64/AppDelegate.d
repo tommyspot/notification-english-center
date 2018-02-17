@@ -9,4 +9,6 @@ dependencies: \
   /Users/thaohuynh/Desktop/react-native/notification-english-center/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
   /Users/thaohuynh/Desktop/react-native/notification-english-center/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
   /Users/thaohuynh/Desktop/react-native/notification-english-center/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/thaohuynh/Desktop/react-native/notification-english-center/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/thaohuynh/Desktop/react-native/notification-english-center/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/thaohuynh/Desktop/react-native/notification-english-center/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPushNotificationManager.h \
+  /Users/thaohuynh/Desktop/react-native/notification-english-center/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventEmitter.h

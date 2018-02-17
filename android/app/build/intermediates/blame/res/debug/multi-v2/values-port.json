@@ -4,13 +4,13 @@
             "outputFile": "/Users/thaohuynh/Desktop/react-native/notification-english-center/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/Users/thaohuynh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/4d87e841343bbd7e3c6547668d690ac8/res/values-port/values-port.xml",
+                    "source": "/Users/thaohuynh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.1.1.aar/671f0b346168f20b4806482b6b6240dd/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",
-                        "startOffsets": "280",
+                        "startOffsets": "229",
                         "endColumns": "55",
-                        "endOffsets": "331"
+                        "endOffsets": "280"
                     },
                     "to": {
                         "startLines": "2",
