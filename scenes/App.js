@@ -1,11 +1,22 @@
 import React from 'react';
-import { AppState, View, Text, StyleSheet } from 'react-native';
+import { AppState, SafeAreaView, Image, StyleSheet } from 'react-native';
 import PushNotification from 'react-native-push-notification';
+import TabNavigator from 'react-native-tab-navigator';
 
 import { COLORS } from './constants';
-import PushNotificationController from './PushNotificationController';
+
+import Home from './home';
+import Dashboard from './dashboard';
+import Vocabulary from './vocabulary';
 
 export default class App extends React.PureComponent {
+	constructor(props) {
+		super(props);
+		this.state = {
+			selectedTab: 'home',
+		};
+	}
+
 	componentDidMount() {
 		AppState.addEventListener('change', this.handleAppStateChange);
 	}
@@ -26,23 +37,57 @@ export default class App extends React.PureComponent {
 		}
 	}
 
+	handleNavigate(tab) {
+		this.setState({ selectedTab: tab });
+	}
+
+	renderIcon(source) {
+		return <Image source={source} style={Styles.icon} />;
+	}
+
 	render() {
-		const textColor = COLORS.red;
+		const { selectedTab } = this.state;
+
 		return (
-			<View style={styles.container}>
-				<Text style={{ color: textColor }}>Thaotest</Text>
-				<PushNotificationController />
-			</View>
+			<SafeAreaView style={Styles.mainPage}>
+				<TabNavigator>
+					<TabNavigator.Item
+						selected={selectedTab === 'home'}
+						title="Home"
+						renderIcon={() => this.renderIcon(require('./images/courses.png'))}
+						onPress={() => this.handleNavigate('home')}>
+						<Home/>
+					</TabNavigator.Item>
+
+					<TabNavigator.Item
+						selected={selectedTab === 'dashboard'}
+						title="Dashboard"
+						renderIcon={() => this.renderIcon(require('./images/dashboard.png'))}
+						onPress={() => this.handleNavigate('dashboard')}>
+						<Dashboard/>
+					</TabNavigator.Item>
+
+					<TabNavigator.Item
+						selected={selectedTab === 'vocabulary'}
+						title="Vocabulary"
+						renderIcon={() => this.renderIcon(require('./images/vocabulary.png'))}
+						onPress={() => this.handleNavigate('vocabulary')}>
+						<Vocabulary/>
+					</TabNavigator.Item>
+				</TabNavigator>
+			</SafeAreaView>
 		);
 	}
 }
 
-const styles = StyleSheet.create({
-	container: {
+const Styles = StyleSheet.create({
+	mainPage: {
 		flex: 1,
 		backgroundColor: COLORS.white,
-		alignItems: 'center',
-		justifyContent: 'center',
 	},
+	icon: {
+		height: 25,
+		width: 25,
+	}
 });
 
