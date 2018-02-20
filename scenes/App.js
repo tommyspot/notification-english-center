@@ -1,9 +1,8 @@
 import React from 'react';
-import { AppState, SafeAreaView, Image, StyleSheet } from 'react-native';
-import PushNotification from 'react-native-push-notification';
+import { AppState, Image, StyleSheet } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 
-import { COLORS } from './constants';
+import NotificationServices from './notificationServices';
 
 import Home from './home';
 import Dashboard from './dashboard';
@@ -15,6 +14,8 @@ export default class App extends React.PureComponent {
 		this.state = {
 			selectedTab: 'home',
 		};
+		this.notificationQueues = [];
+		this.handleAppStateChange = this.handleAppStateChange.bind(this);
 	}
 
 	componentDidMount() {
@@ -27,13 +28,9 @@ export default class App extends React.PureComponent {
 
 	handleAppStateChange(appState) {
 		if (appState === 'background') {
-			PushNotification.localNotification({ message: 'thaotest' });
-
-			PushNotification.getApplicationIconBadgeNumber((value) => {
-				PushNotification.setApplicationIconBadgeNumber(value + 1);
-			});
+			NotificationServices.pushNotification();
 		} else if (appState === 'active') {
-			PushNotification.setApplicationIconBadgeNumber(0);
+			NotificationServices.clearNotification();
 		}
 	}
 
@@ -49,42 +46,36 @@ export default class App extends React.PureComponent {
 		const { selectedTab } = this.state;
 
 		return (
-			<SafeAreaView style={Styles.mainPage}>
-				<TabNavigator>
-					<TabNavigator.Item
-						selected={selectedTab === 'home'}
-						title="Home"
-						renderIcon={() => this.renderIcon(require('./images/courses.png'))}
-						onPress={() => this.handleNavigate('home')}>
-						<Home/>
-					</TabNavigator.Item>
+			<TabNavigator>
+				<TabNavigator.Item
+					selected={selectedTab === 'home'}
+					title="Home"
+					renderIcon={() => this.renderIcon(require('./images/courses.png'))}
+					onPress={() => this.handleNavigate('home')}>
+					<Home />
+				</TabNavigator.Item>
 
-					<TabNavigator.Item
-						selected={selectedTab === 'dashboard'}
-						title="Dashboard"
-						renderIcon={() => this.renderIcon(require('./images/dashboard.png'))}
-						onPress={() => this.handleNavigate('dashboard')}>
-						<Dashboard/>
-					</TabNavigator.Item>
+				<TabNavigator.Item
+					selected={selectedTab === 'dashboard'}
+					title="Dashboard"
+					renderIcon={() => this.renderIcon(require('./images/dashboard.png'))}
+					onPress={() => this.handleNavigate('dashboard')}>
+					<Dashboard/>
+				</TabNavigator.Item>
 
-					<TabNavigator.Item
-						selected={selectedTab === 'vocabulary'}
-						title="Vocabulary"
-						renderIcon={() => this.renderIcon(require('./images/vocabulary.png'))}
-						onPress={() => this.handleNavigate('vocabulary')}>
-						<Vocabulary/>
-					</TabNavigator.Item>
-				</TabNavigator>
-			</SafeAreaView>
+				<TabNavigator.Item
+					selected={selectedTab === 'vocabulary'}
+					title="Vocabulary"
+					renderIcon={() => this.renderIcon(require('./images/vocabulary.png'))}
+					onPress={() => this.handleNavigate('vocabulary')}>
+					<Vocabulary/>
+				</TabNavigator.Item>
+			</TabNavigator>
 		);
 	}
 }
 
 const Styles = StyleSheet.create({
-	mainPage: {
-		flex: 1,
-		backgroundColor: COLORS.white,
-	},
 	icon: {
 		height: 25,
 		width: 25,

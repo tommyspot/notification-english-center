@@ -4,13 +4,13 @@
             "outputFile": "/Users/thaohuynh/Desktop/react-native/notification-english-center/android/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-xlarge-land-v4/values-xlarge-land-v4.xml",
             "map": [
                 {
-                    "source": "/Users/thaohuynh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/78c2292c5c1f67be0c29bdd26f7ce61a/res/values-xlarge-land/values-xlarge-land.xml",
+                    "source": "/Users/thaohuynh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.1.1.aar/7e647a7ff5e83a409ea30c17811fb3ba/res/values-xlarge-land/values-xlarge-land.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",
-                        "startOffsets": "288",
+                        "startOffsets": "237",
                         "endColumns": "63",
-                        "endOffsets": "347"
+                        "endOffsets": "296"
                     },
                     "to": {
                         "startLines": "2",
