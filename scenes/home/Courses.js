@@ -58,13 +58,19 @@ export default class Courses extends React.PureComponent {
 
 	renderItem(item) {
 		return (
-			<TouchableOpacity onPress={() => { this.goToDetail(item) }}>
-				<View style={Styles.courseItem}>
-					<Text>{item.name}</Text>
-					<TouchableHighlight onPress={event => this.register(event, item)}>
-						<Image source={require('../images/notification.png')} style={Styles.image}/>
-					</TouchableHighlight>
-				</View>
+			<TouchableOpacity
+				style={Styles.courseItem}
+				onPress={() => { this.goToDetail(item) }}
+			>
+				<Text>{item.name}</Text>
+				<TouchableHighlight
+					style={Styles.touchImage}
+					underlayColor={COLORS.lightGray}
+					activeOpacity={0.5}
+					onPress={event => this.register(event, item)}
+				>
+					<Image source={require('../images/notification.png')} style={Styles.image}/>
+				</TouchableHighlight>
 			</TouchableOpacity>
 		);
 	}
@@ -94,9 +100,19 @@ const Styles = StyleSheet.create({
 	courseItem: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		padding: 20,
+		alignItems: 'center',
+		paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
 		borderColor: COLORS.lightGray,
 		borderBottomWidth: 1,
+	},
+  touchImage: {
+		width: 44,
+		height: 44,
+		alignItems: 'center',
+    justifyContent: 'center',
 	},
 	image: {
 		width: 24,
