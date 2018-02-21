@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, View, Text, TouchableOpacity, Image, TouchableHighlight, StyleSheet } from 'react-native';
+import { FlatList, Text, TouchableOpacity, Image, TouchableHighlight, StyleSheet } from 'react-native';
 
 import FBDatabase from '../fireBaseServices';
 import NotificationServices from '../notificationServices';
@@ -66,7 +66,6 @@ export default class Courses extends React.PureComponent {
 				<TouchableHighlight
 					style={Styles.touchImage}
 					underlayColor={COLORS.lightGray}
-					activeOpacity={0.5}
 					onPress={event => this.register(event, item)}
 				>
 					<Image source={require('../images/notification.png')} style={Styles.image}/>
